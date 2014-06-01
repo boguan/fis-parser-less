@@ -14,7 +14,15 @@ module.exports = function(content, file, conf) {
 	conf.syncImport = true;
 
 
-	// 参考 https://github.com/gruntjs/grunt-contrib-less/blob/master/README.md
+	/* 参考 
+		https://github.com/gruntjs/grunt-contrib-less/blob/master/README.md
+		
+		Source Map Revision 3 proposal
+		https://docs.google.com/a/google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit?pli=1#
+
+		Working with CSS Preprocessors
+		https://developer.chrome.com/devtools/docs/css-preprocessors
+	*/
 	conf.filename = '/source' + file.subpath; // *.map {sources: '此处用到'}
 	conf.sourceMap = true;
 	conf.sourceMapFilename = file.filename + '.map';
